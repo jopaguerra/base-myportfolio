@@ -1,0 +1,73 @@
+// Apps.scss
+
+// Estilos para dispositivos com tela menor que 768px (celular)
+@media screen and (max-width: 767px) {
+  #portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-size: 2rem;
+    }
+    #sidebar{
+      width: 100%;
+      .info-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        p {
+          font-size: .8rem;
+        }
+      }
+    }
+    #main-content{
+      width: 100%;
+      margin-left: 0;
+      p {
+      font-size: 1rem;
+      text-align: start;
+      font-weight: bolder;
+      }
+    } 
+    .tech-cards-technologies .tech-grid .tech-card{
+    width: 100%;
+    }
+  }
+}
+
+//Estilos para dispositivos com tela entre 768px e 1024px (tablet)
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  #portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-size: 3rem;
+    }
+    #sidebar{
+      width: 100%;
+      .info-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        p {
+          font-size: .8rem;
+        }
+      }
+    }
+    #main-content{
+      width: 100%;
+      margin-left: 0;
+      p {
+      font-size: 1rem;
+      text-align: start;
+      font-weight: bolder;
+      }
+    } 
+    .tech-cards-technologies .tech-grid .tech-card{
+    width: 45%;
+    }
+  }
+}
