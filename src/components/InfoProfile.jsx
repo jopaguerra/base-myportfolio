@@ -1,5 +1,5 @@
-import { AiOutlineMail, AiFillPhone, AiFillEnvironment } from 'react-icons/ai';
-import '../styles/components/infoProfile.sass';
+import { AiOutlineMail, AiFillEnvironment } from 'react-icons/ai';
+import '../styles/components/infoprofile.sass';
 
 const InfoProfile = () => {
   return(
