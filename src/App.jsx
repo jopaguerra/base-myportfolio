@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from "react";
+import MainContent from './components/MainContent';
+import Sidebar from './components/Sidebar';
+import './styles/components/app.sass';
+import './App.scss'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const phrases = ["Front-End", "Back-End", "Full-Stack"];
+  const [phraseIndex, setPhraseIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+    }, 1500);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div id="portfolio">
+      <h1>
+        Olá, meu nome é João Paulo Guerra sou desenvolvedor{" "}
+        <span className="animation">
+          {phrases[phraseIndex]}
+        </span>
+      </h1>
+      <Sidebar id='sidebar'/>
+      <MainContent id='maincontent'/>
+    </div>
+  );
+};
 
-export default App
+export default App;
