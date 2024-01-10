@@ -26,8 +26,10 @@ const App = () => {
           {phrases[phraseIndex]}
         </span>
       </h1>
+      <div id="container">
       <Sidebar id='sidebar'/>
       <MainContent id='maincontent'/>
+      </div>
     </div>
   );
 };
